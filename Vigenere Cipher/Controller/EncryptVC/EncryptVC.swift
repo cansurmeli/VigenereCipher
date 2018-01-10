@@ -17,6 +17,8 @@ class EncryptVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		title = "Encrpyt"
+		
 		plainTextField.delegate = self
 		keyTextField.delegate = self
 		

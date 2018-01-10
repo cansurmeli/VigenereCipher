@@ -16,6 +16,8 @@ class DecryptVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		title = "Decrpyt"
+		
 		cipherTextField.delegate = self
 		keyTextField.delegate = self
 		
