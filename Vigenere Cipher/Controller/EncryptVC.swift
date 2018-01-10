@@ -16,6 +16,5 @@ class EncryptVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		
 	}
 }

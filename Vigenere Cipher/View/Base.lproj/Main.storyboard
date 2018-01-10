@@ -19,13 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ovZ-Ss-S28">
-                                <rect key="frame" x="59.5" y="261.5" width="256" height="144"/>
+                                <rect key="frame" x="59.5" y="247.5" width="256" height="172"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="plaintext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="plaintext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="44"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="UCm-4d-4NQ"/>
+                                            <constraint firstAttribute="height" constant="44" id="rjc-5i-mDs"/>
                                         </constraints>
                                         <color key="textColor" name="Wageningen Green"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -39,11 +40,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="key (e.g. 10.4.23)" textAlignment="center" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cXZ-sq-ryM" userLabel="Key">
-                                        <rect key="frame" x="0.0" y="50" width="256" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="key (e.g. 10.4.23)" textAlignment="center" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cXZ-sq-ryM" userLabel="Key">
+                                        <rect key="frame" x="0.0" y="64" width="256" height="44"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="Hft-pl-bLi"/>
+                                            <constraint firstAttribute="height" constant="44" id="ysO-Fq-LMz"/>
                                         </constraints>
                                         <color key="textColor" name="Wageningen Green"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -58,7 +60,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bS-rJ-New">
-                                        <rect key="frame" x="0.0" y="100" width="256" height="44"/>
+                                        <rect key="frame" x="0.0" y="128" width="256" height="44"/>
                                         <color key="backgroundColor" name="ForestGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="3CB-KI-h98"/>
@@ -104,12 +106,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yNh-3S-ofI">
-                                <rect key="frame" x="59.5" y="261.5" width="256" height="144"/>
+                                <rect key="frame" x="59.5" y="247.5" width="256" height="172"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ciphertext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-nh-UiU" userLabel="PlainText">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ciphertext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-nh-UiU" userLabel="PlainText">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="44"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="BDD-vm-gLY"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="nZH-L9-LFU"/>
                                         </constraints>
                                         <color key="textColor" name="Wageningen Green"/>
@@ -121,10 +124,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="key (e.g. 10.4.23)" textAlignment="center" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8gv-oq-sSM" userLabel="Key">
-                                        <rect key="frame" x="0.0" y="50" width="256" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="key (e.g. 10.4.23)" textAlignment="center" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8gv-oq-sSM" userLabel="Key">
+                                        <rect key="frame" x="0.0" y="64" width="256" height="44"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="0z3-1p-oRS"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="BmW-7m-tcU"/>
                                         </constraints>
                                         <color key="textColor" name="Wageningen Green"/>
@@ -137,7 +141,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zf4-Cw-hsv">
-                                        <rect key="frame" x="0.0" y="100" width="256" height="44"/>
+                                        <rect key="frame" x="0.0" y="128" width="256" height="44"/>
                                         <color key="backgroundColor" name="ForestGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="D1p-uJ-257"/>
@@ -149,7 +153,7 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                                <integer key="value" value="0"/>
+                                                <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
