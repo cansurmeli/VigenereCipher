@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EncryptVC" customModule="Vigenere_Cipher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ovZ-Ss-S28">
-                                <rect key="frame" x="59.5" y="247.5" width="256" height="172"/>
+                                <rect key="frame" x="59.5" y="223" width="256" height="172"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="plaintext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="44"/>
@@ -66,7 +66,7 @@
                                             <constraint firstAttribute="height" constant="44" id="3CB-KI-h98"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="NQ7-OW-fkT"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="Encrypt">
                                             <color key="titleColor" name="BabyPowder"/>
                                         </state>
@@ -102,11 +102,11 @@
             <objects>
                 <viewController id="KA7-LL-wRi" customClass="DecryptVC" customModule="Vigenere_Cipher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t4B-bJ-zq0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yNh-3S-ofI">
-                                <rect key="frame" x="59.5" y="247.5" width="256" height="172"/>
+                                <rect key="frame" x="59.5" y="223" width="256" height="172"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ciphertext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-nh-UiU" userLabel="CipherText">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="44"/>
@@ -153,7 +153,7 @@
                                             <constraint firstAttribute="height" constant="44" id="D1p-uJ-257"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="Lo0-UN-abD"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="Decrypt">
                                             <color key="titleColor" name="BabyPowder"/>
                                         </state>
@@ -188,7 +188,7 @@
             <objects>
                 <viewController id="II2-gL-HrH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yhi-oK-I9q">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="RichBlack"/>
                         <viewLayoutGuide key="safeArea" id="afv-Ny-Ptn"/>
@@ -204,9 +204,10 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6br-I4-xYL" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ebe-11-aUU">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ebe-11-aUU">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="BabyPowder"/>
                         <color key="tintColor" name="ForestGreen"/>
                         <color key="barTintColor" name="GunMetal"/>
                     </tabBar>
@@ -222,6 +223,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="BabyPowder">
+            <color red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BabyPowder">
             <color red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
