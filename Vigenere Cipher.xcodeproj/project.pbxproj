@@ -387,7 +387,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KDTV5NX96;
-				INFOPLIST_FILE = "Vigenere Cipher/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vigenere Cipher/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.can.Vigenere-Cipher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,7 +403,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3KDTV5NX96;
-				INFOPLIST_FILE = "Vigenere Cipher/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vigenere Cipher/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.can.Vigenere-Cipher";
 				PRODUCT_NAME = "$(TARGET_NAME)";
