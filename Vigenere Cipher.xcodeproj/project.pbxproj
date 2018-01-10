@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3698A70420063251001DBFB6 /* DecryptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698A70320063251001DBFB6 /* DecryptVC.swift */; };
+		36B056F3200664E000EF16FF /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B056F2200664E000EF16FF /* Alphabet.swift */; };
+		36B056F7200665F500EF16FF /* VigenereEncryptionBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B056F6200665F500EF16FF /* VigenereEncryptionBlock.swift */; };
+		36B056F9200665FE00EF16FF /* VigenereDecryptionBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B056F8200665FE00EF16FF /* VigenereDecryptionBlock.swift */; };
+		36B056FC2006663C00EF16FF /* Encryptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B056FB2006663C00EF16FF /* Encryptable.swift */; };
+		36B056FE2006664A00EF16FF /* Decryptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B056FD2006664A00EF16FF /* Decryptable.swift */; };
 		36C663B820063FB900F00744 /* EncryptVC+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C663B720063FB900F00744 /* EncryptVC+TextFieldDelegate.swift */; };
 		36C663C1200642CC00F00744 /* DecryptVC+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C663C0200642CC00F00744 /* DecryptVC+TextFieldDelegate.swift */; };
 		36F7CBCE2006200A0050AD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7CBCD2006200A0050AD51 /* AppDelegate.swift */; };
@@ -30,6 +35,11 @@
 
 /* Begin PBXFileReference section */
 		3698A70320063251001DBFB6 /* DecryptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptVC.swift; sourceTree = "<group>"; };
+		36B056F2200664E000EF16FF /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
+		36B056F6200665F500EF16FF /* VigenereEncryptionBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VigenereEncryptionBlock.swift; sourceTree = "<group>"; };
+		36B056F8200665FE00EF16FF /* VigenereDecryptionBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VigenereDecryptionBlock.swift; sourceTree = "<group>"; };
+		36B056FB2006663C00EF16FF /* Encryptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encryptable.swift; sourceTree = "<group>"; };
+		36B056FD2006664A00EF16FF /* Decryptable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decryptable.swift; sourceTree = "<group>"; };
 		36C663B720063FB900F00744 /* EncryptVC+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncryptVC+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		36C663C0200642CC00F00744 /* DecryptVC+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecryptVC+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		36F7CBCA2006200A0050AD51 /* Vigenere Cipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vigenere Cipher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36B056FA2006662D00EF16FF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				36B056FB2006663C00EF16FF /* Encryptable.swift */,
+				36B056FD2006664A00EF16FF /* Decryptable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		36C663B620063FA200F00744 /* EncryptVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +120,7 @@
 		36F7CBCC2006200A0050AD51 /* Vigenere Cipher */ = {
 			isa = PBXGroup;
 			children = (
+				36B056FA2006662D00EF16FF /* Protocol */,
 				36F7CBEF200620E50050AD51 /* Model */,
 				36F7CBED200620D70050AD51 /* Other */,
 				36F7CBEE200620DE0050AD51 /* Controller */,
@@ -141,6 +161,9 @@
 		36F7CBEF200620E50050AD51 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				36B056F2200664E000EF16FF /* Alphabet.swift */,
+				36B056F6200665F500EF16FF /* VigenereEncryptionBlock.swift */,
+				36B056F8200665FE00EF16FF /* VigenereDecryptionBlock.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,10 +279,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B056F3200664E000EF16FF /* Alphabet.swift in Sources */,
+				36B056FE2006664A00EF16FF /* Decryptable.swift in Sources */,
 				36C663C1200642CC00F00744 /* DecryptVC+TextFieldDelegate.swift in Sources */,
+				36B056F7200665F500EF16FF /* VigenereEncryptionBlock.swift in Sources */,
 				36C663B820063FB900F00744 /* EncryptVC+TextFieldDelegate.swift in Sources */,
 				36F7CBF220062DB00050AD51 /* EncryptVC.swift in Sources */,
+				36B056FC2006663C00EF16FF /* Encryptable.swift in Sources */,
 				3698A70420063251001DBFB6 /* DecryptVC.swift in Sources */,
+				36B056F9200665FE00EF16FF /* VigenereDecryptionBlock.swift in Sources */,
 				36F7CBCE2006200A0050AD51 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
