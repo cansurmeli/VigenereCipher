@@ -108,7 +108,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yNh-3S-ofI">
                                 <rect key="frame" x="59.5" y="247.5" width="256" height="172"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ciphertext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-nh-UiU" userLabel="PlainText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ciphertext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-nh-UiU" userLabel="CipherText">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="44"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
@@ -168,6 +168,10 @@
                         <viewLayoutGuide key="safeArea" id="V6r-aw-lce"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Decrypt" id="D0m-d8-dNz"/>
+                    <connections>
+                        <outlet property="cipherTextField" destination="U3q-nh-UiU" id="dKs-6n-b7R"/>
+                        <outlet property="keyTextField" destination="8gv-oq-sSM" id="uqq-gG-7SJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0o-fd-JY4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

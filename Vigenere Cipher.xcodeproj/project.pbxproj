@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3698A70420063251001DBFB6 /* DecryptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698A70320063251001DBFB6 /* DecryptVC.swift */; };
+		36C663B820063FB900F00744 /* EncryptVC+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C663B720063FB900F00744 /* EncryptVC+TextFieldDelegate.swift */; };
+		36C663C1200642CC00F00744 /* DecryptVC+TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C663C0200642CC00F00744 /* DecryptVC+TextFieldDelegate.swift */; };
 		36F7CBCE2006200A0050AD51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7CBCD2006200A0050AD51 /* AppDelegate.swift */; };
-		36F7CBD02006200A0050AD51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F7CBCF2006200A0050AD51 /* ViewController.swift */; };
 		36F7CBD32006200A0050AD51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F7CBD12006200A0050AD51 /* Main.storyboard */; };
 		36F7CBD52006200A0050AD51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36F7CBD42006200A0050AD51 /* Assets.xcassets */; };
 		36F7CBD82006200A0050AD51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F7CBD62006200A0050AD51 /* LaunchScreen.storyboard */; };
@@ -29,9 +30,10 @@
 
 /* Begin PBXFileReference section */
 		3698A70320063251001DBFB6 /* DecryptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecryptVC.swift; sourceTree = "<group>"; };
+		36C663B720063FB900F00744 /* EncryptVC+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EncryptVC+TextFieldDelegate.swift"; sourceTree = "<group>"; };
+		36C663C0200642CC00F00744 /* DecryptVC+TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecryptVC+TextFieldDelegate.swift"; sourceTree = "<group>"; };
 		36F7CBCA2006200A0050AD51 /* Vigenere Cipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vigenere Cipher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F7CBCD2006200A0050AD51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		36F7CBCF2006200A0050AD51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		36F7CBD22006200A0050AD51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		36F7CBD42006200A0050AD51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36F7CBD72006200A0050AD51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36C663B620063FA200F00744 /* EncryptVC */ = {
+			isa = PBXGroup;
+			children = (
+				36F7CBF120062DB00050AD51 /* EncryptVC.swift */,
+				36C663B720063FB900F00744 /* EncryptVC+TextFieldDelegate.swift */,
+			);
+			path = EncryptVC;
+			sourceTree = "<group>";
+		};
+		36C663BF200642BB00F00744 /* DecryptVC */ = {
+			isa = PBXGroup;
+			children = (
+				3698A70320063251001DBFB6 /* DecryptVC.swift */,
+				36C663C0200642CC00F00744 /* DecryptVC+TextFieldDelegate.swift */,
+			);
+			path = DecryptVC;
+			sourceTree = "<group>";
+		};
 		36F7CBC12006200A0050AD51 = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +132,8 @@
 		36F7CBEE200620DE0050AD51 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				36F7CBCF2006200A0050AD51 /* ViewController.swift */,
-				36F7CBF120062DB00050AD51 /* EncryptVC.swift */,
-				3698A70320063251001DBFB6 /* DecryptVC.swift */,
+				36C663B620063FA200F00744 /* EncryptVC */,
+				36C663BF200642BB00F00744 /* DecryptVC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -237,7 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36F7CBD02006200A0050AD51 /* ViewController.swift in Sources */,
+				36C663C1200642CC00F00744 /* DecryptVC+TextFieldDelegate.swift in Sources */,
+				36C663B820063FB900F00744 /* EncryptVC+TextFieldDelegate.swift in Sources */,
 				36F7CBF220062DB00050AD51 /* EncryptVC.swift in Sources */,
 				3698A70420063251001DBFB6 /* DecryptVC.swift in Sources */,
 				36F7CBCE2006200A0050AD51 /* AppDelegate.swift in Sources */,
