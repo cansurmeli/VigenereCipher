@@ -77,12 +77,10 @@
 		36F7CBCC2006200A0050AD51 /* Vigenere Cipher */ = {
 			isa = PBXGroup;
 			children = (
-				36F7CBCD2006200A0050AD51 /* AppDelegate.swift */,
-				36F7CBCF2006200A0050AD51 /* ViewController.swift */,
-				36F7CBD12006200A0050AD51 /* Main.storyboard */,
-				36F7CBD42006200A0050AD51 /* Assets.xcassets */,
-				36F7CBD62006200A0050AD51 /* LaunchScreen.storyboard */,
-				36F7CBD92006200A0050AD51 /* Info.plist */,
+				36F7CBEF200620E50050AD51 /* Model */,
+				36F7CBED200620D70050AD51 /* Other */,
+				36F7CBEE200620DE0050AD51 /* Controller */,
+				36F7CBF0200620F10050AD51 /* View */,
 			);
 			path = "Vigenere Cipher";
 			sourceTree = "<group>";
@@ -94,6 +92,40 @@
 				36F7CBE42006200A0050AD51 /* Info.plist */,
 			);
 			path = "Vigenere CipherTests";
+			sourceTree = "<group>";
+		};
+		36F7CBED200620D70050AD51 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				36F7CBCD2006200A0050AD51 /* AppDelegate.swift */,
+				36F7CBD42006200A0050AD51 /* Assets.xcassets */,
+				36F7CBD62006200A0050AD51 /* LaunchScreen.storyboard */,
+				36F7CBD92006200A0050AD51 /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		36F7CBEE200620DE0050AD51 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				36F7CBCF2006200A0050AD51 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		36F7CBEF200620E50050AD51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		36F7CBF0200620F10050AD51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36F7CBD12006200A0050AD51 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
