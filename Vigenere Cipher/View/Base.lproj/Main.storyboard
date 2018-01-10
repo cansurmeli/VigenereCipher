@@ -21,11 +21,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ovZ-Ss-S28">
                                 <rect key="frame" x="59.5" y="261.5" width="256" height="144"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="plain text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="plaintext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="30"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="256" id="UCm-4d-4NQ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="UCm-4d-4NQ"/>
                                         </constraints>
                                         <color key="textColor" name="Wageningen Green"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -34,13 +34,16 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                 <color key="value" red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="key (e.g. 10.4.23)" textAlignment="center" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cXZ-sq-ryM" userLabel="Key">
                                         <rect key="frame" x="0.0" y="50" width="256" height="30"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="256" id="Hft-pl-bLi"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="Hft-pl-bLi"/>
                                         </constraints>
                                         <color key="textColor" name="Wageningen Green"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -49,6 +52,9 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                 <color key="value" red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bS-rJ-New">
@@ -56,12 +62,17 @@
                                         <color key="backgroundColor" name="ForestGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="3CB-KI-h98"/>
-                                            <constraint firstAttribute="width" constant="256" id="NQ7-OW-fkT"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="NQ7-OW-fkT"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Encrypt">
                                             <color key="titleColor" name="BabyPowder"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -87,11 +98,69 @@
         <!--Decrypt-->
         <scene sceneID="XOT-5k-CVv">
             <objects>
-                <viewController id="KA7-LL-wRi" sceneMemberID="viewController">
+                <viewController id="KA7-LL-wRi" customClass="DecryptVC" customModule="Vigenere_Cipher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t4B-bJ-zq0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yNh-3S-ofI">
+                                <rect key="frame" x="59.5" y="261.5" width="256" height="144"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ciphertext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3q-nh-UiU" userLabel="PlainText">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="30"/>
+                                        <color key="backgroundColor" name="GunMetal"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="nZH-L9-LFU"/>
+                                        </constraints>
+                                        <color key="textColor" name="Wageningen Green"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="0.98823529409999999" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="key (e.g. 10.4.23)" textAlignment="center" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8gv-oq-sSM" userLabel="Key">
+                                        <rect key="frame" x="0.0" y="50" width="256" height="30"/>
+                                        <color key="backgroundColor" name="GunMetal"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="BmW-7m-tcU"/>
+                                        </constraints>
+                                        <color key="textColor" name="Wageningen Green"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="done" smartDashesType="yes" smartInsertDeleteType="yes" smartQuotesType="no" textContentType="tel"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" red="0.98823529409999999" green="1" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zf4-Cw-hsv">
+                                        <rect key="frame" x="0.0" y="100" width="256" height="44"/>
+                                        <color key="backgroundColor" name="ForestGreen"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="D1p-uJ-257"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="Lo0-UN-abD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Decrypt">
+                                            <color key="titleColor" name="BabyPowder"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" name="RichBlack"/>
+                        <constraints>
+                            <constraint firstItem="yNh-3S-ofI" firstAttribute="centerX" secondItem="t4B-bJ-zq0" secondAttribute="centerX" id="S0k-Dc-H3C"/>
+                            <constraint firstItem="yNh-3S-ofI" firstAttribute="centerY" secondItem="t4B-bJ-zq0" secondAttribute="centerY" id="nof-ft-VAa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="V6r-aw-lce"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Decrypt" id="D0m-d8-dNz"/>
@@ -143,7 +212,7 @@
             <color red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ForestGreen">
-            <color red="0.13725490196078433" green="0.50980392156862742" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13725490200000001" green="0.50980392159999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GunMetal">
             <color red="0.1764705882" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
