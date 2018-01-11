@@ -26,6 +26,7 @@ extension VigenereCipherVC: UITextFieldDelegate {
 		
 		if textField == keyTextField {
 			UIView.animate(withDuration: 0.3) {
+				print(self.view.safeAreaInsets.top)
 				self.view.frame.origin.y = -50
 			}
 		}
@@ -34,7 +35,7 @@ extension VigenereCipherVC: UITextFieldDelegate {
 	func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
 		if textField == keyTextField {
 			UIView.animate(withDuration: 0.3) {
-				self.view.frame.origin.y = 100
+				self.view.frame.origin.y = 116
 			}
 		}
 	}
