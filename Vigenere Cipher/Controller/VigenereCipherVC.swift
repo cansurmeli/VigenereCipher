@@ -12,11 +12,13 @@ class VigenereCipherVC: UIViewController {
 	@IBOutlet weak var plainTextField: UITextField!
 	@IBOutlet weak var cipherTextField: UITextField!
 	@IBOutlet weak var keyTextField: UITextField!
-	var currentTextField: UITextField!
 	
 	@IBOutlet weak var encryptButton: UIButton!
 	@IBOutlet weak var decryptButton: UIButton!
 	@IBOutlet weak var breakButton: UIButton!
+	
+	private let vigenereCipher = VigenereCipher()
+	var currentTextField: UITextField!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -54,9 +56,6 @@ class VigenereCipherVC: UIViewController {
 					!key.isEmpty
 			else { return }
 		
-		let encryption = VigenereEncrpytionBlock(plainText: plainText,
-																						 key: key)
-		
-		cipherTextField.text = encryption.cipherText
+		cipherTextField.text = vigenereCipher.encrypt(plainText, withKey: key)
 	}
 }
