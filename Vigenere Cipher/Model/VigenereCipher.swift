@@ -1,10 +1,12 @@
 //
-//  VigenereEncryptionBlock.swift
+//  VigenereCipher.swift
 //  Vigenere Cipher
 //
-//  Created by Can Sürmeli on 10.01.2018.
+//  Created by Can Sürmeli on 11.01.2018.
 //  Copyright © 2018 Can Sürmeli. All rights reserved.
 //
+
+import Foundation
 
 import Foundation
 
@@ -12,10 +14,10 @@ struct VigenereEncrpytionBlock: Encryptable {
 	let plainText: String
 	let key: [Int]
 	var cipherText: String!
-
+	
 	init(plainText: String, key: String) {
 		self.plainText = plainText
-	
+		
 		guard let localDecimalSeparator = Locale.current.decimalSeparator else { return  }
 		self.key = key.components(separatedBy: localDecimalSeparator).map{ Int($0)! }
 		
