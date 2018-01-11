@@ -58,4 +58,15 @@ class VigenereCipherVC: UIViewController {
 		
 		cipherTextField.text = vigenereCipher.encrypt(plainText, withKey: key)
 	}
+	
+	@IBAction func performDecryption(_ sender: UIButton) {
+		guard let cipherText = cipherTextField.text,
+					let key = keyTextField.text,
+					!cipherText.isEmpty,
+					!key.isEmpty
+			else { return }
+		
+		plainTextField.text = vigenereCipher.decrypt(cipherText, withKey: key)
+	}
+	
 }

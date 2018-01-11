@@ -13,15 +13,13 @@ extension VigenereCipher {
 		guard let localDecimalSeparator = Locale.current.decimalSeparator else { return "" }
 		let key = key.components(separatedBy: localDecimalSeparator).map{ Int($0)! }
 		
-		let punctuationRemovedPlainText = removePunctuation(in: plainText)
-		let specialLettersConvertedPlainText = convertSpecialLetters(in: punctuationRemovedPlainText)
-		let lettersCapitalizedPlainText = upperCaseLetters(in: specialLettersConvertedPlainText)
-		
 		var cipherText = ""
 		let alphabetSize = VigenereCipher.alphabet.count
 		var keyIndex = 0
 		
-		for letter in lettersCapitalizedPlainText {
+		let processedPlainText = processTextForVigenereCipher(plainText)
+		
+		for letter in processedPlainText {
 			let letterIndexInAlphabet = indexOfAlphabet(for: String(letter))
 			let keyToEncrypt = key[keyIndex % key.count]
 			let encrpytedLetterIndex = (letterIndexInAlphabet + keyToEncrypt + alphabetSize) % alphabetSize
