@@ -43,7 +43,12 @@ class VigenereCipherVC: UIViewController {
 		view.addGestureRecognizer(keyboardDismissOnTapGesture)
 		
 		let infoButton = UIButton(type: .infoLight)
+		infoButton.addTarget(self, action: #selector(presentAboutVC(_:)), for: .touchUpInside)
 		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: infoButton)
+	}
+	
+	@objc private func presentAboutVC(_ button: UIButton) {
+		performSegue(withIdentifier: "presentAboutView", sender: nil)
 	}
 	
 	@objc private func dismissKeyboard() {
