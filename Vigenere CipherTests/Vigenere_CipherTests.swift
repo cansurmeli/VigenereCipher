@@ -32,12 +32,4 @@ class Vigenere_CipherTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-	
-	func testEncryptionStringProcessing() {
-		let vige = VigenereEncrpytionBlock(plainText: "Hello   < can", key: "10.2.4")
-		
-		print(vige.removePunctuation(in: "Hello   ! can"))
-		print(vige.convertSpecialLetters(in: "cän"))
-	}
-    
 }

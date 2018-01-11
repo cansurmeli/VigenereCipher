@@ -9,6 +9,6 @@
 protocol Encryptable {
 	func removePunctuation(in text: String) -> String
 	func convertSpecialLetters(in text: String) -> String
-	func capitalizeLetters(in text: String) -> String
+	func upperCaseLetters(in text: String) -> String
 	func encrypt(_ text: String) -> String
 }

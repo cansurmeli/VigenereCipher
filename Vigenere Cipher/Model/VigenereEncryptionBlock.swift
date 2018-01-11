@@ -6,7 +6,7 @@
 //  Copyright © 2018 Can Sürmeli. All rights reserved.
 //
 
-struct VigenereEncrpytionBlock {
+struct VigenereEncrpytionBlock: Encryptable {
 	let plainText: String
 	let key: [Int]
 	var cipherText: String!
@@ -17,7 +17,7 @@ struct VigenereEncrpytionBlock {
 		
 		let punctuationRemovedPlainText = removePunctuation(in: plainText)
 		let specialLettersConvertedPlainText = convertSpecialLetters(in: punctuationRemovedPlainText)
-		let lettersCapitalizedPlainText = capitalizeLetters(in: specialLettersConvertedPlainText)
+		let lettersCapitalizedPlainText = upperCaseLetters(in: specialLettersConvertedPlainText)
 		
 		cipherText = encrypt(lettersCapitalizedPlainText)
 	}
@@ -30,11 +30,37 @@ struct VigenereEncrpytionBlock {
 		return text.folding(options: .diacriticInsensitive, locale: nil)
 	}
 	
-	func capitalizeLetters(in text: String) -> String {
-		return text.capitalized
+	func upperCaseLetters(in text: String) -> String {
+		return text.uppercased()
 	}
 	
 	func encrypt(_ text: String) -> String {
-		return ""
+		var cipherText = ""
+		let alphabetSize = VigenereCipher.alphabet.count
+		var keyIndex = 0
+		
+		for letter in text {
+			let letterIndexInAlphabet = indexOfAlphabet(for: String(letter))
+			let keyToEncrypt = key[keyIndex % key.count]
+			let encrpytedLetterIndex = (letterIndexInAlphabet + keyToEncrypt + alphabetSize) % alphabetSize
+			cipherText.append(VigenereCipher.alphabet[encrpytedLetterIndex])
+			keyIndex += 1
+		}
+		
+		return cipherText
+	}
+	
+	private func indexOfAlphabet(for letter: String) -> Int {
+		var index = 0
+		
+		for alphabetLetter in VigenereCipher.alphabet {
+			if letter == alphabetLetter {
+				return index
+			}
+			
+			index += 1
+		}
+		
+		return -1
 	}
 }
