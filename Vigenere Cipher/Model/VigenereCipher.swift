@@ -19,16 +19,24 @@ struct VigenereCipher {
 												 "V", "W", "X",
 												 "Y", "Z"]
 	
-	func removePunctuation(in text: String) -> String {
+	private func removePunctuation(in text: String) -> String {
 		return text.components(separatedBy: .punctuationCharacters).joined()
 	}
 	
-	func convertSpecialLetters(in text: String) -> String {
+	private func convertSpecialLetters(in text: String) -> String {
 		return text.folding(options: .diacriticInsensitive, locale: nil)
 	}
 	
-	func upperCaseLetters(in text: String) -> String {
+	private func upperCaseLetters(in text: String) -> String {
 		return text.uppercased()
+	}
+	
+	func processTextForVigenereCipher(_ text: String) -> String {
+		let punctuationRemovedText = removePunctuation(in: text)
+		let specialLettersConvertedText = convertSpecialLetters(in: punctuationRemovedText)
+		let lettersCapitalizedText = upperCaseLetters(in: specialLettersConvertedText)
+		
+		return lettersCapitalizedText
 	}
 	
 	func indexOfAlphabet(for letter: String) -> Int {

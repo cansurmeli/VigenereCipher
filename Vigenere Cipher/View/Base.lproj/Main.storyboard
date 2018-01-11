@@ -118,6 +118,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="performDecryption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JeC-dF-9oO"/>
                                                     <action selector="performEncryption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCP-wQ-gCj"/>
                                                 </connections>
                                             </button>
@@ -194,35 +195,17 @@
         <namedColor name="BabyPowder">
             <color red="0.98823529409999999" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="BabyPowder">
-            <color red="0.98823529409999999" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="BabyPowder">
-            <color red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="ForestGreen">
             <color red="0.13725490196078433" green="0.50980392156862742" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="ForestGreen">
-            <color red="0.13725490200000001" green="0.50980392159999999" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="GunMetal">
             <color red="0.17647058823529413" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="GunMetal">
-            <color red="0.17647058823529413" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="GunMetal">
-            <color red="0.1764705882" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="RichBlack">
             <color red="0.015686274509803921" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Wageningen Green">
             <color red="0.16862745098039217" green="0.6588235294117647" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Wageningen Green">
-            <color red="0.16862745100000001" green="0.6588235294" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
