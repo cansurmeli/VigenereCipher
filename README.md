@@ -14,5 +14,6 @@ However, I also found the following videos to be quite useful:
 - [Vigenere Cipher - Decryption (Unknown Key)](https://www.youtube.com/watch?v=LaWp_Kq0cKs)
 
 ## Roadmap
-- [ ] Develop the break functionality
+- [ ] Develop the break functionality(+ calculate the time elapsed)
 - [ ] Include unit tests
+- [ ] Implement inline messages for operations(upon success, error, information)
