@@ -252,6 +252,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="GunMetal"/>
                         <color key="tintColor" name="ForestGreen"/>
+                        <color key="barTintColor" name="GunMetal"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -273,6 +274,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="GunMetal"/>
                         <color key="tintColor" name="ForestGreen"/>
+                        <color key="barTintColor" name="GunMetal"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -294,6 +296,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="GunMetal"/>
                         <color key="tintColor" name="ForestGreen"/>
+                        <color key="barTintColor" name="GunMetal"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -309,17 +312,11 @@
         <namedColor name="BabyPowder">
             <color red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="BabyPowder">
-            <color red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="ForestGreen">
             <color red="0.13725490196078433" green="0.50980392156862742" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GunMetal">
             <color red="0.17647058823529413" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="GunMetal">
-            <color red="0.1764705882" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="RichBlack">
             <color red="0.015686274509803921" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
