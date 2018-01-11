@@ -1,27 +1,35 @@
 //
-//  EncryptVC.swift
+//  VigenereCipherVC.swift
 //  Vigenere Cipher
 //
-//  Created by Can Sürmeli on 10.01.2018.
+//  Created by Can Sürmeli on 11.01.2018.
 //  Copyright © 2018 Can Sürmeli. All rights reserved.
 //
 
 import UIKit
 
-class EncryptVC: UIViewController {
-	@IBOutlet weak var cipherTextLabel: UILabel!
+class VigenereCipherVC: UIViewController {
 	@IBOutlet weak var plainTextField: UITextField!
+	@IBOutlet weak var cipherTextField: UITextField!
 	@IBOutlet weak var keyTextField: UITextField!
+	
 	@IBOutlet weak var encryptButton: UIButton!
+	@IBOutlet weak var decryptButton: UIButton!
+	@IBOutlet weak var breakButton: UIButton!
+	
+	private let vigenereCipher = VigenereCipher()
 	var currentTextField: UITextField!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		title = "Encrpyt"
+		title = "Vigenère Cipher"
 		
 		plainTextField.delegate = self
 		keyTextField.delegate = self
+		
+		guard let localDecimalSeparator = Locale.current.decimalSeparator else { return }
+		keyTextField.placeholder = "key (e.g. 10\(localDecimalSeparator)4\(localDecimalSeparator)24)"
 		
 		let keyboardDismissOnSwipeGesture = UISwipeGestureRecognizer(target: self,
 																																 action: #selector(dismissKeyboard))
@@ -30,6 +38,9 @@ class EncryptVC: UIViewController {
 		
 		let keyboardDismissOnTapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
 		view.addGestureRecognizer(keyboardDismissOnTapGesture)
+		
+		let infoButton = UIButton(type: .infoLight)
+		navigationItem.rightBarButtonItem = UIBarButtonItem(customView: infoButton)
 	}
 	
 	@objc private func dismissKeyboard() {
@@ -45,9 +56,6 @@ class EncryptVC: UIViewController {
 					!key.isEmpty
 			else { return }
 		
-		let encryption = VigenereEncrpytionBlock(plainText: plainText,
-																						 key: key)
-		
-		cipherTextLabel.text = encryption.cipherText
+		cipherTextField.text = vigenereCipher.encrypt(plainText, withKey: key)
 	}
 }
