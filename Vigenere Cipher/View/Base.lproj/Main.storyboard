@@ -162,6 +162,7 @@
                         <outlet property="encryptButton" destination="5bS-rJ-New" id="sa2-BB-mig"/>
                         <outlet property="keyTextField" destination="cXZ-sq-ryM" id="wX9-ge-Cwj"/>
                         <outlet property="plainTextField" destination="Cfz-n3-NYU" id="pqh-Kh-ukW"/>
+                        <outlet property="stackViewVerticalConstraint" destination="IlZ-8t-nbb" id="FAG-jN-7ZN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

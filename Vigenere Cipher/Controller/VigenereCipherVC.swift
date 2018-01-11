@@ -17,6 +17,8 @@ class VigenereCipherVC: UIViewController {
 	@IBOutlet weak var decryptButton: UIButton!
 	@IBOutlet weak var breakButton: UIButton!
 	
+	@IBOutlet weak var stackViewVerticalConstraint: NSLayoutConstraint!
+	
 	private let vigenereCipher = VigenereCipher()
 	var currentTextField: UITextField!
 	
