@@ -50,6 +50,12 @@ class VigenereCipherVC: UIViewController {
 		currentTextField.resignFirstResponder()
 	}
 	
+	override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+		plainTextField.text = ""
+		cipherTextField.text = ""
+		keyTextField.text = ""
+	}
+	
 	@IBAction func performEncryption(_ sender: UIButton) {
 		dismissKeyboard()
 		
