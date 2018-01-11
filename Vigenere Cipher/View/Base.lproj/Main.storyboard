@@ -19,10 +19,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ovZ-Ss-S28">
-                                <rect key="frame" x="59.5" y="165" width="256" height="172"/>
+                                <rect key="frame" x="59.5" y="133.5" width="256" height="236"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="plaintext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ciphertext" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZy-80-0yh">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="44"/>
+                                        <color key="backgroundColor" name="GunMetal"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="JHQ-4a-B8E"/>
+                                            <constraint firstAttribute="height" constant="44" id="vRp-6C-K5P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="BabyPowder"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="plaintext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
+                                        <rect key="frame" x="0.0" y="64" width="256" height="44"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="UCm-4d-4NQ"/>
@@ -41,7 +57,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="key (e.g. 10.4.23)" textAlignment="center" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cXZ-sq-ryM" userLabel="Key">
-                                        <rect key="frame" x="0.0" y="64" width="256" height="44"/>
+                                        <rect key="frame" x="0.0" y="128" width="256" height="44"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="Hft-pl-bLi"/>
@@ -60,7 +76,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bS-rJ-New">
-                                        <rect key="frame" x="0.0" y="128" width="256" height="44"/>
+                                        <rect key="frame" x="0.0" y="192" width="256" height="44"/>
                                         <color key="backgroundColor" name="ForestGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="3CB-KI-h98"/>
@@ -75,6 +91,9 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="performEncryption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dFB-hu-bqv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -88,6 +107,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Tck-lJ-Hcj"/>
                     <connections>
+                        <outlet property="cipherTextLabel" destination="tZy-80-0yh" id="MDv-lE-YaD"/>
                         <outlet property="encryptButton" destination="5bS-rJ-New" id="sa2-BB-mig"/>
                         <outlet property="keyTextField" destination="cXZ-sq-ryM" id="wX9-ge-Cwj"/>
                         <outlet property="plainTextField" destination="Cfz-n3-NYU" id="uKj-E3-n7N"/>
@@ -289,8 +309,14 @@
         <namedColor name="BabyPowder">
             <color red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="BabyPowder">
+            <color red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ForestGreen">
             <color red="0.13725490196078433" green="0.50980392156862742" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GunMetal">
+            <color red="0.17647058823529413" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GunMetal">
             <color red="0.1764705882" green="0.2274509804" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

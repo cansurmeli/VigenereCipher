@@ -9,6 +9,7 @@
 import UIKit
 
 class EncryptVC: UIViewController {
+	@IBOutlet weak var cipherTextLabel: UILabel!
 	@IBOutlet weak var plainTextField: UITextField!
 	@IBOutlet weak var keyTextField: UITextField!
 	@IBOutlet weak var encryptButton: UIButton!
@@ -31,9 +32,22 @@ class EncryptVC: UIViewController {
 		view.addGestureRecognizer(keyboardDismissOnTapGesture)
 	}
 	
-	@objc func dismissKeyboard() {
+	@objc private func dismissKeyboard() {
 		guard let currentTextField = currentTextField else { return }
 		
 		currentTextField.resignFirstResponder()
+	}
+	
+	@IBAction func performEncryption(_ sender: UIButton) {
+		guard let plainText = plainTextField.text,
+					let key = keyTextField.text,
+					!plainText.isEmpty,
+					!key.isEmpty
+			else { return }
+		
+		let encryption = VigenereEncrpytionBlock(plainText: plainText,
+																						 key: key)
+		
+		cipherTextLabel.text = encryption.cipherText
 	}
 }
