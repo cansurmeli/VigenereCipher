@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ovZ-Ss-S28">
                                 <rect key="frame" x="59.5" y="125.5" width="256" height="300"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="plaintext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="plaintext" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="44"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
@@ -40,7 +40,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ciphertext" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDB-bX-qgO" userLabel="CipherText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="ciphertext" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VDB-bX-qgO" userLabel="CipherText">
                                         <rect key="frame" x="0.0" y="64" width="256" height="44"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
