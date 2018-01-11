@@ -154,7 +154,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Tck-lJ-Hcj"/>
+                    <navigationItem key="navigationItem" id="Tck-lJ-Hcj">
+                        <barButtonItem key="rightBarButtonItem" id="SE9-2r-e2D">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="O8w-7u-Ir5">
+                                <rect key="frame" x="337" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="eIx-eD-sMv" kind="presentation" modalTransitionStyle="flipHorizontal" id="VMB-E5-sYu"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="breakButton" destination="twX-7u-7rf" id="gCa-Tp-uRd"/>
                         <outlet property="cipherTextField" destination="VDB-bX-qgO" id="3Px-uu-1q0"/>
@@ -163,7 +173,6 @@
                         <outlet property="keyTextField" destination="cXZ-sq-ryM" id="wX9-ge-Cwj"/>
                         <outlet property="plainTextField" destination="Cfz-n3-NYU" id="pqh-Kh-ukW"/>
                         <outlet property="stackViewVerticalConstraint" destination="IlZ-8t-nbb" id="FAG-jN-7ZN"/>
-                        <segue destination="eIx-eD-sMv" kind="presentation" identifier="presentAboutView" modalTransitionStyle="flipHorizontal" id="9CX-QE-4CA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -177,20 +186,69 @@
                     <view key="view" contentMode="scaleToFill" id="fzh-4f-Mhj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="4Ym-nw-iQk">
+                                <rect key="frame" x="130" y="20" width="115" height="145"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="10L-Lo-zMr">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="56.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZA-jp-k98">
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="29"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <color key="textColor" name="BabyPowder"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can Sürmeli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ls-7o-x9T">
+                                                <rect key="frame" x="13.5" y="37" width="88" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" name="BabyPowder"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jFK-W9-GSC">
+                                        <rect key="frame" x="0.0" y="88.5" width="115" height="56.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byd-ai-ALw">
+                                                <rect key="frame" x="15" y="0.0" width="85" height="29"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <color key="textColor" name="BabyPowder"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOV-K3-NQU">
+                                                <rect key="frame" x="45.5" y="37" width="24" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" name="BabyPowder"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="rn3-a9-zUV"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" name="RichBlack"/>
+                        <constraints>
+                            <constraint firstItem="4Ym-nw-iQk" firstAttribute="centerX" secondItem="fzh-4f-Mhj" secondAttribute="centerX" id="Uor-KU-vD1"/>
+                            <constraint firstItem="4Ym-nw-iQk" firstAttribute="top" secondItem="xn6-J4-QNS" secondAttribute="top" constant="20" id="rGp-qZ-M1O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xn6-J4-QNS"/>
                     </view>
                     <navigationItem key="navigationItem" id="YHn-mU-izq">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="y5j-Bz-l6A">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="y5j-Bz-l6A">
                             <connections>
                                 <action selector="dismissAboutVC:" destination="phZ-rz-6rg" id="2YP-gU-vpi"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="versionNumberLabel" destination="sOV-K3-NQU" id="wFN-UN-WCr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjY-vh-r3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2998" y="-505"/>
+            <point key="canvasLocation" x="3413.5999999999999" y="-504.19790104947532"/>
         </scene>
         <!--Encrypt-->
         <scene sceneID="yLB-74-yGj">
@@ -227,6 +285,9 @@
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" name="BabyPowder"/>
                         </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -235,30 +296,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8O-gi-Hrn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2270.4000000000001" y="-504.64767616191909"/>
+            <point key="canvasLocation" x="2650" y="-504"/>
         </scene>
     </scenes>
     <resources>
         <namedColor name="BabyPowder">
             <color red="0.98823529409999999" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="BabyPowder">
-            <color red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ForestGreen">
-            <color red="0.13725490196078433" green="0.50980392156862742" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="ForestGreen">
             <color red="0.13725490196078433" green="0.50980392156862742" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GunMetal">
             <color red="0.17647058823529413" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="GunMetal">
-            <color red="0.17647058823529413" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="RichBlack">
-            <color red="0.015686274509803921" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="RichBlack">
             <color red="0.015686274509803921" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
