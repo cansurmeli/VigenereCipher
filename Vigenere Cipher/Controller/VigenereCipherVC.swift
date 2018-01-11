@@ -26,6 +26,7 @@ class VigenereCipherVC: UIViewController {
 		title = "Vigenère Cipher"
 		
 		plainTextField.delegate = self
+		cipherTextField.delegate = self
 		keyTextField.delegate = self
 		
 		guard let localDecimalSeparator = Locale.current.decimalSeparator else { return }
@@ -50,6 +51,8 @@ class VigenereCipherVC: UIViewController {
 	}
 	
 	@IBAction func performEncryption(_ sender: UIButton) {
+		dismissKeyboard()
+		
 		guard let plainText = plainTextField.text,
 					let key = keyTextField.text,
 					!plainText.isEmpty,
@@ -60,6 +63,8 @@ class VigenereCipherVC: UIViewController {
 	}
 	
 	@IBAction func performDecryption(_ sender: UIButton) {
+		dismissKeyboard()
+		
 		guard let cipherText = cipherTextField.text,
 					let key = keyTextField.text,
 					!cipherText.isEmpty,
