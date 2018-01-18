@@ -14,6 +14,7 @@ However, I also found the following videos to be quite useful:
 - [Vigenere Cipher - Decryption (Unknown Key)](https://www.youtube.com/watch?v=LaWp_Kq0cKs)
 
 ## Roadmap
+- [ ] Known Issue: wrongful encryption/decryption of spaces
 - [ ] Develop the break functionality(+ calculate the time elapsed)
 - [ ] Include unit tests
-- [ ] Implement inline messages for operations(upon success, error, information)
+- [ ] Implement an inline message system for operations(success, error, information)
