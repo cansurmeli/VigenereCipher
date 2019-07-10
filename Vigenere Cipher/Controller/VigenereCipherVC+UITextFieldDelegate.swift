@@ -32,7 +32,7 @@ extension VigenereCipherVC: UITextFieldDelegate {
 		}
 	}
 	
-	func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+	func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
 		if textField == keyTextField {
 			UIView.animate(withDuration: 0.3) {
 				self.stackViewVerticalConstraint.constant = 0

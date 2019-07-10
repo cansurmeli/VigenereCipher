@@ -49,7 +49,7 @@ class VigenereCipherVC: UIViewController {
 		currentTextField.resignFirstResponder()
 	}
 	
-	override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+	override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
 		plainTextField.text = ""
 		cipherTextField.text = ""
 		keyTextField.text = ""
