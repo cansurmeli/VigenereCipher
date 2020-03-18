@@ -85,4 +85,10 @@ class VigenereCipherVC: UIViewController {
 		plainTextField.text = vigenereCipher.decrypt(cipherText, withKey: key)
 	}
 	
+	@IBAction func performBreak(_ sender: Any) {
+		let alert = UIAlertController(title: "Missing Functionality", message: "This functionality is yet to be implemented.", preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+		self.present(alert, animated: true, completion: nil)
+	}
+	
 }

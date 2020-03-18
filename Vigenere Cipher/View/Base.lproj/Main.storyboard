@@ -139,6 +139,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="performBreak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qW4-dp-Wes"/>
                                             <action selector="performEncryption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="slb-eb-lwx"/>
                                         </connections>
                                     </button>
