@@ -11,13 +11,17 @@
         <!--Vigenère Cipher-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="VigenereCipherVC" customModule="Vigenere_Cipher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="BYZ-38-t0r" customClass="VigenereCipherVC" customModule="Vigenere_Cipher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="747.66666666666674"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7YV-oN-LEd">
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
+                                <color key="backgroundColor" name="RichBlack"/>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ovZ-Ss-S28">
-                                <rect key="frame" x="79" y="224" width="256" height="300"/>
+                                <rect key="frame" x="79" y="298" width="256" height="300"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="hello" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="44"/>
@@ -77,7 +81,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="y5m-cy-yXA">
-                                        <rect key="frame" x="0.0" y="192.00000000000006" width="256" height="44"/>
+                                        <rect key="frame" x="0.0" y="192" width="256" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bS-rJ-New">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
@@ -123,7 +127,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twX-7u-7rf">
-                                        <rect key="frame" x="0.0" y="256.00000000000006" width="256" height="44"/>
+                                        <rect key="frame" x="0.0" y="256" width="256" height="44"/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="W9k-Mc-2hD"/>
@@ -146,12 +150,16 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="RichBlack"/>
+                        <color key="backgroundColor" name="GunMetal"/>
                         <constraints>
+                            <constraint firstItem="7YV-oN-LEd" firstAttribute="trailing" secondItem="tQv-zK-Acs" secondAttribute="trailing" id="22Y-OM-5vt"/>
+                            <constraint firstItem="7YV-oN-LEd" firstAttribute="leading" secondItem="tQv-zK-Acs" secondAttribute="leading" id="DWD-hi-8au"/>
                             <constraint firstItem="ovZ-Ss-S28" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IlZ-8t-nbb"/>
-                            <constraint firstItem="ovZ-Ss-S28" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TEs-1P-rPK"/>
+                            <constraint firstItem="ovZ-Ss-S28" firstAttribute="centerX" secondItem="tQv-zK-Acs" secondAttribute="centerX" id="TEs-1P-rPK"/>
+                            <constraint firstItem="7YV-oN-LEd" firstAttribute="top" secondItem="tQv-zK-Acs" secondAttribute="top" constant="-0.33333333333331439" id="bzU-Gl-C4Y"/>
+                            <constraint firstItem="7YV-oN-LEd" firstAttribute="bottom" secondItem="tQv-zK-Acs" secondAttribute="bottom" id="nc1-3u-8CX"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="dRw-bk-hZ7"/>
+                        <viewLayoutGuide key="safeArea" id="tQv-zK-Acs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Vigenère Cipher" largeTitleDisplayMode="always" id="Tck-lJ-Hcj">
                         <barButtonItem key="rightBarButtonItem" image="info.circle.fill" catalog="system" id="zUm-UW-bUo">
@@ -172,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="-504"/>
+            <point key="canvasLocation" x="1426.0869565217392" y="-504.24107142857139"/>
         </scene>
         <!--AboutVC-->
         <scene sceneID="AwJ-Lm-4W3">
@@ -247,7 +255,6 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <viewLayoutGuide key="safeArea" id="rn3-a9-zUV"/>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KP-o2-DjK">
                                         <rect key="frame" x="0.0" y="320" width="330" height="44"/>
@@ -276,12 +283,12 @@
                         <color key="backgroundColor" name="RichBlack"/>
                         <constraints>
                             <constraint firstItem="4Ym-nw-iQk" firstAttribute="top" secondItem="1M1-Al-XHP" secondAttribute="bottom" constant="24" id="1Kv-x1-KTo"/>
-                            <constraint firstItem="1M1-Al-XHP" firstAttribute="trailing" secondItem="xn6-J4-QNS" secondAttribute="trailing" id="6xW-GX-ILY"/>
-                            <constraint firstItem="4Ym-nw-iQk" firstAttribute="centerX" secondItem="fzh-4f-Mhj" secondAttribute="centerX" id="Uor-KU-vD1"/>
-                            <constraint firstItem="1M1-Al-XHP" firstAttribute="top" secondItem="xn6-J4-QNS" secondAttribute="top" id="fVU-6a-wvy"/>
-                            <constraint firstItem="1M1-Al-XHP" firstAttribute="leading" secondItem="xn6-J4-QNS" secondAttribute="leading" id="m7b-JV-ftA"/>
+                            <constraint firstItem="1M1-Al-XHP" firstAttribute="trailing" secondItem="BDY-oS-f8x" secondAttribute="trailing" id="6xW-GX-ILY"/>
+                            <constraint firstItem="4Ym-nw-iQk" firstAttribute="centerX" secondItem="BDY-oS-f8x" secondAttribute="centerX" id="Uor-KU-vD1"/>
+                            <constraint firstItem="1M1-Al-XHP" firstAttribute="top" secondItem="BDY-oS-f8x" secondAttribute="top" id="fVU-6a-wvy"/>
+                            <constraint firstItem="1M1-Al-XHP" firstAttribute="leading" secondItem="BDY-oS-f8x" secondAttribute="leading" id="m7b-JV-ftA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="xn6-J4-QNS"/>
+                        <viewLayoutGuide key="safeArea" id="BDY-oS-f8x"/>
                     </view>
                     <connections>
                         <outlet property="versionNumberLabel" destination="sOV-K3-NQU" id="wFN-UN-WCr"/>
@@ -294,16 +301,18 @@
         <!--Encrypt-->
         <scene sceneID="yLB-74-yGj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G0E-Pk-XnK" sceneMemberID="viewController">
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="G0E-Pk-XnK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Encrypt" id="0o0-pM-bOX"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="hUH-6a-dGr">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.33333333333334"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="GunMetal"/>
-                        <viewLayoutGuide key="safeArea" id="r8a-lv-Qpm"/>
                         <color key="tintColor" name="ForestGreen"/>
+                        <color key="barTintColor" name="GunMetal"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="BabyPowder"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HQg-Sh-X0K">
