@@ -25,14 +25,19 @@ class VigenereCipherVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		title = "Vigenère Cipher"
-		
 		plainTextField.delegate = self
 		cipherTextField.delegate = self
 		keyTextField.delegate = self
 		
+		plainTextField.attributedPlaceholder = NSAttributedString(string: "plaintext",
+																															attributes: [.foregroundColor: UIColor(named: "BabyPowder")!])
+		
+		cipherTextField.attributedPlaceholder = NSAttributedString(string: "ciphertext",
+																															attributes: [.foregroundColor: UIColor(named: "BabyPowder")!])
+		
 		guard let localDecimalSeparator = Locale.current.decimalSeparator else { return }
-		keyTextField.placeholder = "key (e.g. 10\(localDecimalSeparator)4\(localDecimalSeparator)24)"
+		keyTextField.attributedPlaceholder = NSAttributedString(string: "key (e.g. 10\(localDecimalSeparator)4\(localDecimalSeparator)24)",
+																														attributes: [.foregroundColor: UIColor(named: "BabyPowder")!])
 		
 		let keyboardDismissOnSwipeGesture = UISwipeGestureRecognizer(target: self,
 																																 action: #selector(dismissKeyboard))
@@ -49,6 +54,7 @@ class VigenereCipherVC: UIViewController {
 		currentTextField.resignFirstResponder()
 	}
 	
+	// Shake to reset
 	override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
 		plainTextField.text = ""
 		cipherTextField.text = ""

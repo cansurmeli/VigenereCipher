@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G0E-Pk-XnK">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G0E-Pk-XnK">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Vigenere CipherVC-->
+        <!--Vigenère Cipher-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VigenereCipherVC" customModule="Vigenere_Cipher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="747.66666666666674"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ovZ-Ss-S28">
-                                <rect key="frame" x="59.5" y="125.5" width="256" height="300"/>
+                                <rect key="frame" x="79" y="224" width="256" height="300"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="plaintext" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="hello" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-n3-NYU" userLabel="PlainText">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="44"/>
                                         <color key="backgroundColor" name="GunMetal"/>
                                         <constraints>
@@ -80,7 +77,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="y5m-cy-yXA">
-                                        <rect key="frame" x="0.0" y="192" width="256" height="44"/>
+                                        <rect key="frame" x="0.0" y="192.00000000000006" width="256" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bS-rJ-New">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="44"/>
@@ -126,7 +123,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twX-7u-7rf">
-                                        <rect key="frame" x="0.0" y="256" width="256" height="44"/>
+                                        <rect key="frame" x="0.0" y="256.00000000000006" width="256" height="44"/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="W9k-Mc-2hD"/>
@@ -153,17 +150,13 @@
                             <constraint firstItem="ovZ-Ss-S28" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IlZ-8t-nbb"/>
                             <constraint firstItem="ovZ-Ss-S28" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TEs-1P-rPK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="dRw-bk-hZ7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Tck-lJ-Hcj">
-                        <barButtonItem key="rightBarButtonItem" id="SE9-2r-e2D">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="O8w-7u-Ir5">
-                                <rect key="frame" x="337" y="11" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="eIx-eD-sMv" kind="presentation" modalTransitionStyle="flipHorizontal" id="VMB-E5-sYu"/>
-                                </connections>
-                            </button>
+                    <navigationItem key="navigationItem" title="Vigenère Cipher" largeTitleDisplayMode="always" id="Tck-lJ-Hcj">
+                        <barButtonItem key="rightBarButtonItem" image="info.circle.fill" catalog="system" id="zUm-UW-bUo">
+                            <connections>
+                                <segue destination="phZ-rz-6rg" kind="showDetail" id="11Y-kV-DMR"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -183,73 +176,119 @@
         <!--AboutVC-->
         <scene sceneID="AwJ-Lm-4W3">
             <objects>
-                <viewController id="phZ-rz-6rg" customClass="AboutVC" customModule="Vigenere_Cipher" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="phZ-rz-6rg" customClass="AboutVC" customModule="Vigenere_Cipher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fzh-4f-Mhj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1M1-Al-XHP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <color key="backgroundColor" name="GunMetal"/>
+                                <color key="tintColor" name="ForestGreen"/>
+                                <color key="barTintColor" name="GunMetal"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" name="BabyPowder"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="About" id="wCS-lc-7X4">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="70E-td-wse">
+                                            <connections>
+                                                <action selector="dismissAboutVC:" destination="phZ-rz-6rg" id="FcS-aB-O4P"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="4Ym-nw-iQk">
-                                <rect key="frame" x="130" y="20" width="115" height="145"/>
+                                <rect key="frame" x="42" y="80" width="330" height="364"/>
                                 <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8sE-QA-fPb">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="VzE-a4-RO3"/>
+                                            <constraint firstAttribute="width" constant="330" id="dhq-8d-OiG"/>
+                                        </constraints>
+                                        <string key="text">This application demonstrates Vigenère Cipher. It has been developed as a proof-of-concept and should not be taken as a fully functioning security tool.</string>
+                                        <color key="textColor" name="BabyPowder"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="10L-Lo-zMr">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="56.5"/>
+                                        <rect key="frame" x="0.0" y="152" width="330" height="52"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZA-jp-k98">
-                                                <rect key="frame" x="0.0" y="0.0" width="115" height="29"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <rect key="frame" x="124" y="0.0" width="82" height="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                                 <color key="textColor" name="BabyPowder"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can Sürmeli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ls-7o-x9T">
-                                                <rect key="frame" x="13.5" y="37" width="88" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <rect key="frame" x="120.66666666666666" y="30" width="88.666666666666657" height="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                 <color key="textColor" name="BabyPowder"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jFK-W9-GSC">
-                                        <rect key="frame" x="0.0" y="88.5" width="115" height="56.5"/>
+                                        <rect key="frame" x="0.0" y="236" width="330" height="52"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byd-ai-ALw">
-                                                <rect key="frame" x="15" y="0.0" width="85" height="29"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <rect key="frame" x="135.66666666666666" y="0.0" width="58.666666666666657" height="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                                 <color key="textColor" name="BabyPowder"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOV-K3-NQU">
-                                                <rect key="frame" x="45.5" y="37" width="24" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <rect key="frame" x="153.33333333333334" y="30" width="23.333333333333343" height="22"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                 <color key="textColor" name="BabyPowder"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="rn3-a9-zUV"/>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KP-o2-DjK">
+                                        <rect key="frame" x="0.0" y="320" width="330" height="44"/>
+                                        <color key="backgroundColor" name="ForestGreen"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="3oH-cw-lsd"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="C3P-ig-SR6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="Visit Github Project">
+                                            <color key="titleColor" name="BabyPowder"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="performEncryption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bF8-U7-2Zb"/>
+                                            <action selector="visitGithubProject:" destination="phZ-rz-6rg" eventType="touchUpInside" id="EjS-rF-mPw"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="RichBlack"/>
                         <constraints>
+                            <constraint firstItem="4Ym-nw-iQk" firstAttribute="top" secondItem="1M1-Al-XHP" secondAttribute="bottom" constant="24" id="1Kv-x1-KTo"/>
+                            <constraint firstItem="1M1-Al-XHP" firstAttribute="trailing" secondItem="xn6-J4-QNS" secondAttribute="trailing" id="6xW-GX-ILY"/>
                             <constraint firstItem="4Ym-nw-iQk" firstAttribute="centerX" secondItem="fzh-4f-Mhj" secondAttribute="centerX" id="Uor-KU-vD1"/>
-                            <constraint firstItem="4Ym-nw-iQk" firstAttribute="top" secondItem="xn6-J4-QNS" secondAttribute="top" constant="20" id="rGp-qZ-M1O"/>
+                            <constraint firstItem="1M1-Al-XHP" firstAttribute="top" secondItem="xn6-J4-QNS" secondAttribute="top" id="fVU-6a-wvy"/>
+                            <constraint firstItem="1M1-Al-XHP" firstAttribute="leading" secondItem="xn6-J4-QNS" secondAttribute="leading" id="m7b-JV-ftA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xn6-J4-QNS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YHn-mU-izq">
-                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="y5j-Bz-l6A">
-                            <connections>
-                                <action selector="dismissAboutVC:" destination="phZ-rz-6rg" id="2YP-gU-vpi"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="versionNumberLabel" destination="sOV-K3-NQU" id="wFN-UN-WCr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjY-vh-r3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3413.5999999999999" y="-504.19790104947532"/>
+            <point key="canvasLocation" x="2188" y="-504"/>
         </scene>
         <!--Encrypt-->
         <scene sceneID="yLB-74-yGj">
@@ -257,14 +296,18 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G0E-Pk-XnK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Encrypt" id="0o0-pM-bOX"/>
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="hUH-6a-dGr">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="GunMetal"/>
+                        <viewLayoutGuide key="safeArea" id="r8a-lv-Qpm"/>
                         <color key="tintColor" name="ForestGreen"/>
-                        <color key="barTintColor" name="GunMetal"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HQg-Sh-X0K">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gTW-na-hvH"/>
                     </connections>
@@ -273,39 +316,14 @@
             </objects>
             <point key="canvasLocation" x="659.20000000000005" y="-503.74812593703155"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="xwR-ZI-v7w">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eIx-eD-sMv" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="cER-PY-cui">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="ForestGreen"/>
-                        <color key="barTintColor" name="GunMetal"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="BabyPowder"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="phZ-rz-6rg" kind="relationship" relationship="rootViewController" id="ece-kT-hdW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f8O-gi-Hrn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2650" y="-504"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="info.circle.fill" catalog="system" width="64" height="60"/>
         <namedColor name="BabyPowder">
             <color red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="BabyPowder">
-            <color red="0.98823529409999999" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9882352941176471" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ForestGreen">
             <color red="0.13725490196078433" green="0.50980392156862742" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

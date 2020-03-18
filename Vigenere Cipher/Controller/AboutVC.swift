@@ -14,11 +14,16 @@ class AboutVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		title = "About"
 		versionNumberLabel.text = Bundle.versionNumber()
 	}
 	
 	@IBAction func dismissAboutVC(_ sender: UIBarButtonItem) {
 		dismiss(animated: true, completion: nil)
+	}
+	
+	@IBAction func visitGithubProject(_ sender: Any) {
+		UIApplication.shared.open(URL(string: "https://github.com/cansurmeli/VigenereCipher")!,
+															options: [:],
+															completionHandler: nil)
 	}
 }
